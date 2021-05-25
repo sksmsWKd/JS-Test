@@ -13,7 +13,7 @@ function multiplyNumeric(){
                 }else{
                 alert(menu[key]);
                 }
-        }
+        }  
      
       
 }
