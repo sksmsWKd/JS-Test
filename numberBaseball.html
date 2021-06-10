@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+
+<body>
+        <script>
+                let defense1 = prompt("수비 :천의자리를 입력해주세요");
+                let defense2 = prompt("수비 :백의자리를 입력해주세요");
+                let defense3 = prompt("수비 :십의자리를 입력해주세요");
+                let defense4 = prompt("수비 :일의자리를 입력해주세요");
+
+                let attack1 = prompt("공격 :천의자리를 입력해주세요");
+                let attack2 = prompt("공격 :백의자리를 입력해주세요");
+                let attack3 = prompt("공격 :십의자리를 입력해주세요");
+                let attack4 = prompt("공격 :일의자리를 입력해주세요");
+
+                let count = 0;
+                let count1;
+                let count2;
+                let count3;
+                let count4;
+
+                let wrong1 = '';
+                let wrong2 = '';
+                let wrong3 = '';
+                let wrong4 = '';
+
+                function attack() {
+
+                        let count1 = (defense1 == attack1) ? 1 : 0;
+                        let count2 = (defense2 == attack2) ? 1 : 0;
+                        let count3 = (defense3 == attack3) ? 1 : 0;
+                        let count4 = (defense4 == attack4) ? 1 : 0;
+
+
+                        alert(`숫자와 자리를 동시에 맞춘 갯수는 : ${count1+count2+count3+count4} 개 입니다.`);
+
+                        if (count1 == 0) {
+                                wrong1 += "천의자리";
+                        }
+                        if (count2 == 0) {
+                                wrong2 += " 백의자리";
+                        }
+                        if (count3 == 0) {
+                                wrong3 += " 십의자리";
+                        }
+                        if (count4 == 0) {
+                                wrong4 += " 일의자리";
+                        }
+                        alert(`틀린 자리는 : ${wrong1} / ${wrong2} / ${wrong3}/ ${wrong4}입니다`);
+                }
+                attack();
+        </script>
+</body>
+
+</html>
